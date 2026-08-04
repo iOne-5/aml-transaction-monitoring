@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Data files — never commit
+data/raw/*
+data/processed/*
+!data/**/.gitkeep
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
+
+# Power BI backups
+*.pbix.bak
