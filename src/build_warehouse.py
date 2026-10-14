@@ -13,7 +13,7 @@ def run_sql_file(con, path: Path) -> None:
     sql = path.read_text(encoding="utf-8").strip()
     if not sql or all(line.strip().startswith("--") or not line.strip()
                       for line in sql.splitlines()):
-        print(f"  ⚠ {path.name} is empty or comments only — skipped")
+        print(f" {path.name} is empty or comments only — skipped")
         return
     con.execute(sql)
     print(f"  ✓ {path.name}")
